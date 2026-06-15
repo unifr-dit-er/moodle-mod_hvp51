@@ -48,11 +48,11 @@ class mobile {
         // Verify course context.
         $cm = get_coursemodule_from_id('hvp', $cmid);
         if (!$cm) {
-            throw new moodle_exception('invalidcoursemodule');
+            throw \new moodle_exception('invalidcoursemodule');
         }
         $course = $DB->get_record('course', array('id' => $cm->course));
         if (!$course) {
-            throw new moodle_exception('coursemisconf');
+            throw \new moodle_exception('coursemisconf');
         }
         require_course_login($course, false, $cm, true, true);
         $context = context_module::instance($cm->id);

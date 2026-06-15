@@ -343,7 +343,7 @@ class view_assets {
      */
     public function validatecontent() {
         if ($this->content === null) {
-            throw new moodle_exception('invalidhvp', 'mod_hvp');
+            throw \new moodle_exception('invalidhvp', 'mod_hvp');
         }
     }
 

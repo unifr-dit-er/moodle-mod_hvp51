@@ -37,7 +37,7 @@ $PAGE->set_url($url);
 // Load Course.
 $course = $DB->get_record('course', array('id' => $id));
 if (!$course) {
-    throw new moodle_exception('invalidcourseid');
+    throw \new moodle_exception('invalidcourseid');
 }
 
 // Require login.
